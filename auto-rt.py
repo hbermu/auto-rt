@@ -23,7 +23,6 @@ print ("====> Consumer Secret: " + consumer_secret)
 print ("====> Access Token: " + access_token)
 print ("====> Access Token Secret: " + access_token_secret)
 
-
 ## Configure access
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -46,11 +45,9 @@ class StartStreamingRT(StreamListener):
 
     def on_data(self, status):
         tweet = json.loads(status.strip())
-
         tweetId = tweet.get('id_str')
-        retweeted = tweet.get('retweeted')
 
-        ## Tweet not empty
+        ## Try if Tweet not retweeted
         if tweetId is not None:
             try: 
                 twitterApi.retweet(tweetId)
@@ -72,11 +69,8 @@ class StartStreamingRT(StreamListener):
             #returning False in on_data disconnects the stream
             return False
 
-
 if __name__ == '__main__':
     ## Start streaming
     streamListener = StartStreamingRT()
     twitterStream = Stream(auth, streamListener)
-
-    #twitterStream.filter(follow=['721871893150744576'])
     twitterStream.filter(follow=USERS_id)
