@@ -1,7 +1,7 @@
 # Auto-rt
 ===
 
-Basic auto-reply application using Python, Tweepy and NLTK.
+Basic auto-retwee application using Python and Tweepy 
 
 To run this sample code, you'll need to install the following python libraries:
 
