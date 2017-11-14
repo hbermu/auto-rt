@@ -5,7 +5,16 @@ Basic auto-reply application using Python, Tweepy and NLTK.
 
 To run this sample code, you'll need to install the following python libraries:
 
-- Tweepy: [https://github.com/tweepy/tweepy](https://github.com/tweepy/tweepy)
+- Tweepy 3.2.0: [https://github.com/tweepy/tweepy](https://github.com/tweepy/tweepy) 
+
+## Run in Docker
+---
+Need build and run:
+docker build -t auto-rt .
+docker run -d --name delegacion-rt auto-rt:latest
+
+If you want to change configuration without build:
+docker run -d --name delegacion-rt -v "path/twitter.conf:/usr/src/app/twitter.conf" auto-rt:latest
 
 
 ## Getting Started
@@ -30,7 +39,7 @@ accounts = @DelegaHCD,@DeleCCSSJJ,@DelegacionEPS,@delecolm,@...
 Install dependencies:
 
 ```
-pip install tweepy
+pip install tweepy==3.2.0
 ```
 
 Run the python script in the project directory:
