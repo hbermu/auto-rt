@@ -32,6 +32,7 @@ secret = your_api_secret
 token = your_access_token
 secret = your_access_secret
 
+[accounts]
 accounts = @DelegaHCD,@DeleCCSSJJ,@DelegacionEPS,@delecolm,@...
 
 ```
