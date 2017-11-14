@@ -13,7 +13,7 @@ Need build and run:
 docker build -t auto-rt .
 docker run -d --name delegacion-rt auto-rt:latest
 
-If you want to change configuration without build:
+If you want to change configuration without build:  
 docker run -d --name delegacion-rt -v "pathTo_twitter.conf:/usr/src/app/twitter.conf" auto-rt:latest
 
 
