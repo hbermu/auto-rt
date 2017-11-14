@@ -9,8 +9,8 @@ To run this sample code, you'll need to install the following python libraries:
 
 ## Run in Docker
 ---
-Need build and run:
-docker build -t auto-rt .
+Need build and run:  
+docker build -t auto-rt .  
 docker run -d --name delegacion-rt auto-rt:latest
 
 If you want to change configuration without build:  
