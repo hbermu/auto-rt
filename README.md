@@ -16,6 +16,8 @@ docker run -d --name delegacion-rt auto-rt:latest
 If you want to change configuration without build:  
 docker run -d --name delegacion-rt -v "pathTo_twitter.conf:/usr/src/app/twitter.conf" auto-rt:latest
 
+Repo in https://hub.docker.com/r/hbermu/auto-rt/
+
 
 ## Getting Started
 ---
