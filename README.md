@@ -1,5 +1,4 @@
 # Auto-rt
-===
 
 Basic auto-retwee application using Python and Tweepy 
 
@@ -23,7 +22,8 @@ Repo in https://hub.docker.com/r/hbermu/auto-rt/
 ---
 Create a [Twitter App](https://apps.twitter.com/).
 
-Specify your Twitter App keys and tokens in a new config file named .twitter. There is a sample config file named .twitter.sample:
+Specify your Twitter App keys and tokens in a new config file named twitter.conf  
+There is a sample config file named twitter.conf.sample:
 
 ```
 [apikey]
@@ -35,7 +35,7 @@ token = your_access_token
 secret = your_access_secret
 
 [accounts]
-accounts = @DelegaHCD,@DeleCCSSJJ,@DelegacionEPS,@delecolm,@...
+accounts = @test,@test2,...
 
 ```
 
@@ -48,7 +48,7 @@ pip install tweepy==3.2.0
 Run the python script in the project directory:
 
 ```
-python auto-rt.py
+python2.7 auto-rt.py
 ```
 
 Notes
